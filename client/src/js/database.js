@@ -12,7 +12,6 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
 // This code will use the PUT method in order to update existing content the user had typed
 export const putDb = async (id, content) => {
   //debugging line
@@ -29,7 +28,6 @@ export const putDb = async (id, content) => {
   console.log("...text added to jate database!");
 }
 
-// TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.log("Reading data from jate database...")
   const jateDb = await openDB('jate', 1);
