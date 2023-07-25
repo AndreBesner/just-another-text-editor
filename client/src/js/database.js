@@ -19,7 +19,7 @@ export const putDb = async (id, content) => {
   //opens jate database
   const jateDb = await openDB('jate', 1);
   //creates a transaction with read and write priv
-  const tx = jateDb.transaction('jate', 'readWrite');
+  const tx = jateDb.transaction('jate', 'readwrite');
   //open object store with respect to jate
   const objStore = tx.objectStore('jate');
   //updates records with id parameter and the user typed content
@@ -31,7 +31,7 @@ export const putDb = async (id, content) => {
 export const getDb = async () => {
   console.log("Reading data from jate database...")
   const jateDb = await openDB('jate', 1);
-  const tx = jateDb.transaction('jate', 'readWrite');
+  const tx = jateDb.transaction('jate', 'readwrite');
   const objStore = tx.objectStore('jate');
   const req = objStore.getAll();
   const res = await req;
